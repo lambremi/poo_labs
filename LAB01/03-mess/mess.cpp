@@ -1,25 +1,11 @@
+#include <iostream>
 #include <string>
 
-int main() {
-    i = getTwo();
-    cout << i << endl;
-    int i;
-    int k = i + 1
-            printInt(k);
-    cout << endl;
-    MyType x;
-    x.myIntValue = 5;
-    x.printMe();
-    MyType2 y;
-    y.myDoubleValue = x.myIntValue;
-    y.printMe();
-    return;
-}
+using namespace std;
 
-#include <iostream>
 
-using std::cout;
-using std::cerr;
+int getTwo();
+void printInt(int i);
 
 class MyType2 {
 public:
@@ -27,9 +13,8 @@ public:
     void printMe() {
         std::cout << "MyType2{ myDoubleValue=" << this->myDoubleValue << " }" << std::endl;
     }
-}
+};
 
-void printInt(int i);
 
 typedef unsigned long ulong;
 
@@ -49,7 +34,22 @@ void printInt(int i) {
     cout << i;
 }
 
-int getTwo();
 int getTwo() {
     return 2;
+}
+
+int main() {
+    int i;
+    i = getTwo();
+    cout << i << endl;
+    int k = i + 1;
+    printInt(k);
+    cout << endl;
+    MyType x;
+    x.myIntValue = 5;
+    x.printMe();
+    MyType2 y;
+    y.myDoubleValue = x.myIntValue;
+    y.printMe();
+    return 0;
 }
